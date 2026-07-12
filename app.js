@@ -14,6 +14,7 @@ app.use(express.static(`${__dirname}/public`)); app.use(express.urlencoded({ ext
 app.use(session({ secret: process.env.SESSION_SECRET || 'development-secret', resave: false, saveUninitialized: false, store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }) }));
 app.use(flash());
 app.use((req, res, next) => { res.locals.sessionUser = req.session.userName; res.locals.successMessages = req.flash('success'); res.locals.errorMessages = req.flash('error'); next(); });
+app.get('/health', (req, res) => res.status(200).json({ status: 'ok' }));
 app.get('/', (req, res) => res.redirect(req.session.userId ? '/dashboard' : '/login'));
 app.use(require('./routes/auth')); app.use(require('./routes/meetings')); app.use(require('./routes/actionItems'));
 app.use((req, res) => res.status(404).render('auth/login', { title: 'Not Found' }));
