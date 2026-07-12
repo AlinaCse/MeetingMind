@@ -1,0 +1,23 @@
+{
+  "name": "meetingmind",
+  "version": "1.0.0",
+  "description": "AI-powered meeting assistant",
+  "main": "app.js",
+  "scripts": { "start": "node app.js", "dev": "nodemon app.js" },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "bcrypt": "^5.1.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.9.5",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": { "nodemon": "^3.1.9" }
+}

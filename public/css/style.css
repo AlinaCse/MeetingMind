@@ -1,0 +1,10 @@
+body { background: #f8fafc; color: #1e293b; }
+.auth-page { min-height: 100vh; background: linear-gradient(135deg, #eff6ff, #f8fafc); }
+.auth-card { max-width: 480px; margin-top: 8vh; }
+.meeting-card { transition: transform .15s, box-shadow .15s; border: 0; }
+.meeting-card:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1rem rgba(15, 23, 42, .12) !important; }
+.urgency-high { border-left: 4px solid #dc3545; }
+.urgency-medium { border-left: 4px solid #ffc107; }
+.urgency-normal { border-left: 4px solid #198754; }
+.notes { white-space: pre-wrap; font-family: inherit; margin: 0; }
+summary { cursor: pointer; }

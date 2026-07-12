@@ -1,0 +1,3 @@
+const router = require('express').Router(); const controller = require('../controllers/meetingController'); const isLoggedIn = require('../middleware/isLoggedIn');
+router.get('/dashboard', isLoggedIn, controller.dashboard); router.get('/meetings', isLoggedIn, controller.index); router.get('/meetings/new', isLoggedIn, controller.newMeeting); router.post('/meetings/analyse', isLoggedIn, controller.analyse); router.post('/meetings', isLoggedIn, controller.create); router.get('/meetings/:id', isLoggedIn, controller.show); router.delete('/meetings/:id', isLoggedIn, controller.destroy);
+module.exports = router;
